@@ -1,0 +1,33 @@
+<p>
+  remote-api works!
+</p>
+<ol>
+  <li *ngFor="let user of allUsers">
+    {{user.email}}
+  </li>
+</ol>
+Search: <input type="text" [(ngModel)]="searchText">{{searchText}}
+<br>
+<br>
+<table border="1">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>NAME</td>
+      <td>EMAIL</td>
+      <td>USERNAME</td>
+      <td>PHONE</td>
+      <td>ACTION</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of allUsers | livesearch:searchText ; let currentUser=index ">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.phone}}</td>
+      <td><button (click)="viewUser(currentUser)">View</button></td>
+    </tr>
+  </tbody>
+</table>

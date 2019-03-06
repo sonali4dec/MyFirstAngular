@@ -1,0 +1,47 @@
+Friends directive Component:
+<!--{{ friends}} -->
+<br>
+Using ngFor:
+<ol>
+  <li *ngFor="let f of friends">{{f | titlecase}}</li>
+</ol>
+
+
+<ol>
+  <li *ngFor="let l of locations">{{l.city | uppercase}} code is {{l.code}}</li>
+</ol>
+
+<p>Can I come (Yes/No) ?
+<span *ngIf="display else nodisplay">Yes</span></p>
+<ng-template #nodisplay>No</ng-template>
+
+<!--Number is <span *ngIf="check === 1; then displayOne; check === 2; then displayTwo else displayOther"></span>
+<ng-template #displayOne>One</ng-template>
+<ng-template #displayTwo>Two</ng-template>
+<ng-template #displayOther>Other</ng-template> -->
+
+<div [ngSwitch] = "check">
+    <span *ngSwitchCase=1>One</span>
+    <span *ngSwitchCase=2>Two</span>
+    <span *ngSwitchDefault>Other</span>
+</div>
+
+<div [ngSwitch] = "check1">
+  <span *ngSwitchCase="'Sonali'">SB</span>
+  <span *ngSwitchCase="'Prafful'">PB</span>
+  <span *ngSwitchDefault>Other</span>
+</div>
+
+Salary id {{salary | currency:'EUR'}}
+<br>
+Date is {{myDate | date:'full' | uppercase}} 
+
+<br>
+Unsorted Scores: {{scores}}
+<br>
+Sorted Scores: {{scores | numbersort : 'dsc'}}
+
+<br>
+Unsorted Friends: {{friends}}
+<br>
+Sorted Friends: {{friends | stringsort : 'dsc'}}

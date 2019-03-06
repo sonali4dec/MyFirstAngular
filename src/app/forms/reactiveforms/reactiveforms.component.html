@@ -1,0 +1,18 @@
+<h3>Reactive Forms</h3>
+
+<form [formGroup]="rHobbyForm" (ngSubmit)="addHobby(rHobbyForm.value)">
+  <b>First Name: </b><input type="text" formControlName="fName">{{fName}}
+  <br>
+  <b>Last Name: </b><input type="text" formControlName="lName">{{lName}}
+  <br>
+  <b>Hobbies:     </b> 
+  <select formControlName="hobby">
+    <option value="swimming">Swimming</option>
+    <option value="driving">Driving</option>
+    <option value="hacking">Hacking</option>
+    <option value="coding">Coding</option>
+  </select>
+  <br>
+  <button type="submit" [disabled]="rHobbyForm.invalid" style="background:darksalmon">Add Hobby</button>
+
+</form>

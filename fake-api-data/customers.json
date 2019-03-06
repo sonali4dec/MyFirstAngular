@@ -1,0 +1,39 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Sonali",
+      "amount": 500,
+      "status": true,
+      "image": "1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Prafful",
+      "amount": 600,
+      "status": true,
+      "image": "2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Manoj",
+      "amount": 670,
+      "status": true,
+      "image": "3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Manish",
+      "amount": 745,
+      "status": true,
+      "image": "4.jpg"
+    },
+    {
+      "name": "Halwa",
+      "amount": 23,
+      "status": true,
+      "image": "2.jpg",
+      "id": 5
+    }
+  ]
+}

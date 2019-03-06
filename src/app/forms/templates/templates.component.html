@@ -1,0 +1,18 @@
+<h3>Template Forms</h3>
+
+<form #hobbyForm="ngForm" (ngSubmit)="addHobby(hobbyForm.value)">
+  <b>First Name: </b><input type="text" name="firstName" [(ngModel)]="fName">{{fName}}
+  <br>
+  <b>Last Name: </b><input type="text" name="lastName" [(ngModel)]="lName">{{lName}}
+  <br>
+  <b>Hobbies:     </b> 
+  <select name="hobby" ngModel>
+    <option value="swimming">Swimming</option>
+    <option value="driving">Driving</option>
+    <option value="hacking">Hacking</option>
+    <option value="coding">Coding</option>
+  </select>
+  <br>
+  <button type="submit" style="background:darkseagreen">Add Hobby</button>
+
+</form>

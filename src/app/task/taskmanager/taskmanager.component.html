@@ -1,0 +1,22 @@
+<h3>Simple Task Manager</h3>
+
+Add Task: <input type="text" autofocus [(ngModel)]='currentTask' #inputTask>
+&nbsp;
+
+<button (click)='addTask()'>Add Task</button>
+<br>
+{{currentTask}}
+<br>
+Current Tasks:
+<ol>
+  <li *ngFor="let t of tasks; let taskIndex = index">
+    {{t}} &nbsp; &nbsp; <button (click)="changeTaskStatus(taskIndex)" style="background: greenyellow">Done</button>
+  </li>
+</ol>
+
+Completed Tasks:
+<ol>
+    <li *ngFor="let d of doneTasks; let doneTaskIndex = index">
+      {{d}} &nbsp; &nbsp; <button (click)="undoneTaskStatus(doneTaskIndex)" style="background:darksalmon">UnDone</button>
+    </li>
+  </ol>
